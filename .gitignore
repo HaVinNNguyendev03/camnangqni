@@ -1,0 +1,64 @@
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa]ppPackages/
+[Vv]s/
+*.dbmdl
+*.user
+*.rsuser
+*.opendb
+*.suo
+*.swp
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
+Generated_Code/
+
+# Mac files
+.DS_Store
+
+# Visual Studio 2019/2022
+.vscode/
+.vs/
+.vscode/*
+
+# Rider
+.idea/
+.idea/**
+
+# Resharper settings
+_ReSharper*/
+*.DotSettings.user
+
+# Build results
+bin/
+obj/
+out/
+
+# ASP.NET Scaffolding
+.scaffolding/
+
+# Environment variables
+.env
+.env.*
+
+# Azure Web Apps
+.scm/
+
+# JetBrains Rider
+.idea/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
