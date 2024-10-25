@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="api-base-url" content="@ViewData["ApiBaseUrl"]">
     <title>@ViewData["Title"]</title>
     <!-- Favicon icon -->
     <link rel="icon"
@@ -21,6 +22,7 @@
     @RenderBody()
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+     <script src="~/dist/js/Auth/tokenlogin.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <!-- All Jquery -->
     <!-- ============================================================== -->
@@ -46,6 +48,7 @@
     <script src="~/assets/libs/flot/jquery.flot.crosshair.js"></script>
     <script src="~/assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
     <script src="~/dist/js/pages/chart/chart-page-init.js"></script>
+    
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

@@ -1,0 +1,48 @@
+.boxdatatoken {
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.boxdatatoken p {
+    margin: 0;
+    color: #000000;
+}
+.boxdatatoken-content {
+    display: none;
+    position: absolute;
+    top: calc(100% + 5px);
+    border: 1px solid #0f0f0f;
+    background: #ffffff;
+    padding: 10px 20px;
+    left: auto;
+    border-radius: 6px;
+    right: 0;
+    box-shadow: 1px 6px 18px -12px #0000006e;
+    flex-direction: column;
+    gap: 10px 0;
+    min-width: 100%
+}
+.boxdatatoken-img {
+   
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    border: 0;
+    background: #E8EDF9;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #000000;
+    font-weight: 400;
+}
+.boxdatatoken-img img {
+    width: 100px;
+    height: 60px;
+}
+.boxdatatoken.active .boxdatatoken-content {
+    display: flex;
+}

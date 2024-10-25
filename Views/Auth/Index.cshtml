@@ -1,29 +1,36 @@
 ﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+    
 *@
 @{
     ViewData["Title"] = "Trang Đăng Nhập";
     Layout = "~/Views/Shared/_LayoutAuth.cshtml";
+    @model Users
 }
 <br>
 <br>
 <div class="cont">
     <div class="form sign-in">
-        <h2>Hệ Thống Cẩm Nang Bưu Điện</h2>
+        <form id="loginForm" method="post">
+             <h2>Hệ Thống Cẩm Nang Bưu Điện</h2>
         <div class="auth-box__img">
             <img src="~/assets/images/logo/logo_vnpost-camnang.png" alt="Alternate Text" />
         </div>
         <label>
             <span>Email</span>
-            <input type="email" />
+            <input id="email" asp-for="UserEmail" type="email" />
         </label>
         <label>
             <span>Password</span>
-            <input type="password" />
+            <input id="password" asp-for="UserPassWord" type="password" />
         </label>
         <p class="forgot-pass">Forgot password?</p>
-        <button type="button" class="submit">Đăng Nhập</button>
-
+        <button type="submit" class="submit">Đăng Nhập</button>
+        <div id="message"></div>
+            @if (TempData["ErrorMessage"] != null)
+            {
+                <div class="text-danger">@TempData["ErrorMessage"]</div>
+            }
+        </form>
     </div>
     <div class="sub-cont">
         <div class="img">
@@ -42,26 +49,31 @@
         </div>
         <div class="form sign-up">
             <h2>Tạo Tài Khoản</h2>
-            <label>
+            <form asp-action="Signin" method="post">
+                 <label>
                 <span>Name</span>
-                <input type="text" />
+                <input asp-for="Username" type="text" />
+                <span asp-validation-for="Username"></span>
             </label>
             <label>
                 <span>Email</span>
-                <input type="email" />
+                <input asp-for="UserEmail" type="email" />
+                <span asp-validation-for="UserEmail"></span>
             </label>
             <label>
                 <span>Password</span>
-                <input type="password" />
+                <input asp-for="UserPassWord" type="password" />
+                <span asp-validation-for="UserPassWord"></span>
             </label>
-            <button type="button" class="submit">Đăng Ký</button>
-
+            <button type="submit" class="submit">Đăng Ký</button>
+            </form>
+            @if (!ViewData.ModelState.IsValid)
+            {
+                <div>@ViewData.ModelState.Values.First().Errors.First().ErrorMessage</div>
+            }
         </div>
     </div>
 </div>
-
-<script>
-    document.querySelector('.img__btn').addEventListener('click', function () {
-        document.querySelector('.cont').classList.toggle('s--signup');
-    });
-</script>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
