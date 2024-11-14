@@ -1,0 +1,76 @@
+@{
+    ViewData["Title"] = "Quản Lý Người Dùng";
+}
+ <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/3.2.0/css/buttons.dataTables.css">
+<h1>@ViewData["Title"]</h1>
+<div class="employee-search">
+    <div class="employee-title">
+        <h2 class="title-h2">Danh sách nhân viên</h2>
+        <div class="buttons">
+            <button type="button" class="add-button">➕ Thêm mới</button>
+            <button type="submit" class="search-button">🔍 Tìm kiếm</button>
+        </div>
+    </div>
+    <div class="div-form">
+        <form class="search-form">
+            <div class="form-group">
+                <label for="department-code">Mã đơn vị <span class="required">*</span></label>
+                <select id="department-code">
+                    <option value="">Chọn mã đơn vị</option>
+                    <!-- Thêm các tùy chọn khác ở đây -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="employee-name">Tên nhân viên</label>
+                <input type="text" id="employee-name" placeholder="Nhập tên nhân viên">
+            </div>
+            <div class="form-group">
+                <label for="phone">Số điện thoại</label>
+                <input type="text" id="phone" placeholder="Nhập số điện thoại">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Nhập email">
+            </div>
+        </form>
+    </div>
+</div>
+<div class="datatable">
+    <table id="myTable" class="display">
+    <thead>
+        <tr>
+            <th>STT</th>
+            <th>Mã Đơn Vị</th>
+             <th>Tên nhân Viên</th>
+              <th>Email</th>
+               <th>Trạng Thái</th>
+                <th>Loại Nhân Viên </th>
+                 <th>Thông tin</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>570000</td>
+            <td>Nguyễn van a</td>
+            <td>test@gmail.com</td>
+          <td>Hoạt Động</td>
+          <td>Admin Tỉnh</td>
+           <td>Admin phòng ktnv</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>571800</td>
+            <td>Nguyễn van b</td>
+            <td>test1@gmail.com</td>
+          <td>Hoạt Động</td>
+          <td>Admin Huyện</td>
+           <td>Nhân viên kiếm toán</td>
+        </tr>
+
+    </tbody>
+</table>
+</div>
+

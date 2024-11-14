@@ -1,0 +1,29 @@
+.employee-search {
+}
+.employee-title {
+    display: flex;
+}
+.buttons {
+    display: flex;
+}
+.add-button {
+    background: antiquewhite;
+}
+.search-button {
+    background: antiquewhite;
+}
+.div-form{
+    background-color: aliceblue;
+    margin: 0px 10px;
+}
+.search-form {
+    display: flex;
+}
+.form-group {
+}
+.required {
+}
+.title-h2{
+    background-color: aqua;
+    margin: 10px;
+}

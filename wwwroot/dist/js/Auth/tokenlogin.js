@@ -29,7 +29,6 @@ $(document).ready(function () {
                     console.log("Cookie 'jwtToken' không tồn tại.");
                 }
             },
-
             error: function (xhr) {
                 // Nếu có lỗi xảy ra, hiển thị thông báo lỗi
                 $("#message").text("Đăng nhập thất bại: " + xhr.responseText);

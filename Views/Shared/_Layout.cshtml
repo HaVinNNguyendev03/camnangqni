@@ -27,8 +27,10 @@
     <!-- Custom CSS -->
     <link href="~/dist/css/style.min.css" rel="stylesheet" />
     <!-- Custom CSS Auth-->
-    <link href="~/dist/css/Auth/auth.css" rel="stylesheet" />
+
+    <link href="~/dist/css/User/index.css" rel="stylesheet" />
     <link href="~/dist/css/Layout/Layout.css" rel="stylesheet" />
+     <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css" />
 </head>
 
 <body>
@@ -199,30 +201,42 @@
                     <ul id="sidebarnav" class="pt-4">
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                               href="index.html"
+                               href="~/usersmanager"
                                aria-expanded="false">
-                                <i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Dashboard</span>
+                                <i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Quản Lý User</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                href="charts.html"
                                aria-expanded="false">
-                                <i class="mdi mdi-chart-bar"></i><span class="hide-menu">Charts</span>
+                                <i class="mdi mdi-chart-bar"></i><span class="hide-menu">Quản Lý Đơn Vị</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                               href="widgets.html"
+                            <a class="sidebar-link has-arrow waves-effect waves-dark"
+                               href="javascript:void(0)"
                                aria-expanded="false">
-                                <i class="mdi mdi-chart-bubble"></i><span class="hide-menu">Widgets</span>
+                                <i class="mdi mdi-face"></i><span class="hide-menu">Kiểm Kê Thiết Bị </span>
                             </a>
+                            <ul aria-expanded="false" class="collapse first-level">
+                                <li class="sidebar-item">
+                                    <a href="icon-material.html" class="sidebar-link">
+                                        <i class="mdi mdi-emoticon"></i><span class="hide-menu">Kiểm Kê Theo Đơn Vị</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="icon-fontawesome.html" class="sidebar-link">
+                                        <i class="mdi mdi-emoticon-cool"></i><span class="hide-menu">Kiểm Kê Theo Loại</span>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                href="tables.html"
                                aria-expanded="false">
-                                <i class="mdi mdi-border-inside"></i><span class="hide-menu">Tables</span>
+                                <i class="mdi mdi-border-inside"></i><span class="hide-menu">Sửa Chữa,Bảo Dưỡng</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
@@ -397,6 +411,7 @@
         </div>
     </footer>
     </div>
+  
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
@@ -407,6 +422,15 @@
     <script src="~/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
     <script src="~/assets/extra-libs/sparkline/sparkline.js"></script>
+   
+  
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.2.0/js/dataTables.buttons.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.2.0/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.2.0/js/buttons.print.min.js"></script>
     <!--Wave Effects -->
     <script src="~/dist/js/waves.js"></script>
     <!--Menu sidebar -->
@@ -425,6 +449,7 @@
     <script src="~/assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
     <script src="~/dist/js/pages/chart/chart-page-init.js"></script>
     <script src="~/dist/js/Layout/Layout.js"></script>
+    <script src="~/dist/js/User/index.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 
 

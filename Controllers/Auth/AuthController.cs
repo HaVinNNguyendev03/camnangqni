@@ -43,7 +43,6 @@ namespace camnangqni.Controllers.Auth
         [Route("auth/home")]
         public ActionResult Index()
         {
-           
             return View();
         }
         [HttpPost]
@@ -75,6 +74,7 @@ namespace camnangqni.Controllers.Auth
                     return RedirectToAction("Index", "Auth");
 
                 }
+
                 return View("Index", model);
             }
             catch (System.Exception)
